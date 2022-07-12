@@ -53,27 +53,27 @@ export default function Textbox(props) {
         </div>
         <button
           onClick={upperText}
-          className="btn btn-warning mx-2"
+          className="btn btn-warning mx-2 my-2"
           type="submit"
         >
           <FaLevelUpAlt /> Convert to UpperCase
         </button>
         <button
           onClick={lowerText}
-          className="btn btn-warning mx-2"
+          className="btn btn-warning mx-2 my-2"
           type="submit"
         >
           <FaLevelDownAlt /> Convert to LowerCase
         </button>
         <button
           onClick={copyText}
-          className="btn btn-warning mx-2"
+          className="btn btn-warning mx-2 my-2"
           type="submit"
         >
           <FaClipboardCheck /> Copy to Clipboard
         </button>
         <h3 className={`text-${screenMode === "light" ? "dark" : "light"}`}>
-          {text.replace(" ", "").split(" ").length} Words, and{" "}
+          {text.split(" ").filter((totaltext) => {return totaltext.length!==0}).length} Words, and{" "}
           {text.trim().replace(" ", "").length} Characters
         </h3>
         <h3 className={`text-${screenMode === "light" ? "dark" : "light"}`}>
